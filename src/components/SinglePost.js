@@ -4,7 +4,7 @@ import { loggin } from "../assets/functions";
 
 const SinglePost = ({body, message, component, click}) => {
 
-    //loggin(message, component);
+    loggin(message, component);
     return (
         <p onClick={click} className='post'>{body}</p>
     )
