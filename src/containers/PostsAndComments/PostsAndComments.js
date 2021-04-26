@@ -10,6 +10,7 @@ import {loggin} from "../../assets/functions";
 import SinglePost from "../../components/SinglePost";
 import SingleComment from "../../components/SingleComment";
 import Modal from "../../components/UI/Modal/Modal";
+import WithClass from "../../hoc/WithClass";
 
 class PostsAndComments extends Component {
 
@@ -76,17 +77,19 @@ class PostsAndComments extends Component {
         }
 
         return (
-            <Aux>
-                <SinglePost click={() => this.callBackMethod(postID)} message={'Hello From '} component={'SinglePost'}
+            <WithClass classes={'postsAndComments'}>
+                <p style={{fontWeight: 'bold', fontStyle: 'italic'}}>Post:</p>
+                    <SinglePost click={() => this.callBackMethod(postID)} message={'Hello From '} component={'SinglePost'}
                             body={post.body}/>
-                {/* eslint-disable-next-line array-callback-return */}
-                {comments.map((comment, i) => {
-                    if (postID === comment.postId) {
-                        return <SingleComment message={'Hello From '} component={'Single Comment'} key={i}
-                                              body={comment.body}/>
-                    }
-                })}
-            </Aux>
+                <p style={{fontWeight: 'bold', fontStyle: 'italic'}}>Comments:</p>
+                    {/* eslint-disable-next-line array-callback-return */}
+                    {comments.map((comment, i) => {
+                        if (postID === comment.postId) {
+                            return <SingleComment message={'Hello From '} component={'Single Comment'} key={i}
+                                                  body={comment.body}/>
+                        }
+                    })}
+            </WithClass>
         )
     }
 }
