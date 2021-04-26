@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+.posts {
+  border-radius: 59px;
+  background: linear-gradient(225deg, #9cb6e6, #b9d8ff);
+  box-shadow:  -30px 30px 60px #879ec7,
+  30px -30px 60px #d3f6ff;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.post {
+  color: cyan;
+}
+
+.comment {
+  color: orangered;
+}
+
+.link {
+  text-decoration: none;
+}
