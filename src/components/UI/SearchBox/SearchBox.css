@@ -17,8 +17,8 @@ input {
 }
 .search-bar input,
 .search-btn {
-    width: 3em;
-    height: 3em;
+    width: 4em;
+    height: 4em;
 }
 .search-bar input:invalid:not(:focus),
 .search-btn {
@@ -114,15 +114,15 @@ input {
 
 @media screen and (prefers-color-scheme: dark) {
     input {
-        color: #f1f1f1;
+        color: #060606;
     }
     .search-bar input {
         box-shadow: 0 0 0 0.4em rgb(89, 213, 218) inset;
     }
     .search-bar input:focus,
     .search-bar input:valid {
-        background: #3d3d3d;
-        box-shadow: 0 0 0 0.1em #3d3d3d inset;
+        background: #ededed;
+        box-shadow: 0 0 0 0.1em #999999 inset;
     }
     .search-btn {
         background:  linear-gradient(135deg, rgb(89, 213, 218) 0%, rgb(65, 71, 75) 71%);;

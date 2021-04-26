@@ -8,7 +8,7 @@ const SearchBox = ({message, component, change}) => {
     return (
 
         <div className="search-bar">
-            <input type="search" name="search" required onChange={change} placeholder="  Search Posts by User's name"/>
+            <input type="search" name="search" required onChange={change} placeholder="     Search Posts by User's name"/>
                 <button className="search-btn">
                     <span>Search</span>
                 </button>
