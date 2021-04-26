@@ -1,0 +1,22 @@
+.posts {
+    margin-top: 25px;
+    padding: 30px;
+    border-radius: 59px;
+    box-shadow:  -30px 30px 60px #879ec7,
+    30px -30px 60px rgba(42, 108, 255, 0.52);
+}
+
+.posts h2 {
+    text-align: center;
+}
+
+.userAndPosts{
+    margin-top: 45px;
+}
+
+.userAndPosts .line {
+    width: 260px;
+    height: 5px;
+    margin: 0 auto;
+    background-color: darkblue;
+}

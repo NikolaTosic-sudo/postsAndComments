@@ -72,17 +72,20 @@ class UserAndPosts extends Component {
         // Mapping all posts based on the selected User
         const userPosts = posts.map((post, i) => {
                 return (
-                    <Aux key={i}>
-                        <h2>Post From {user}</h2>
-                        <PostsAndComments message={'Hello From '} component={'PostsAndComments'} clickID={clickID} post={post} postID={post.id} />
-                    </Aux>
+                    <WithClass classes={'userAndPosts'} key={i}>
+                        <Aux>
+                            <h2>Post From {user}</h2>
+                            <div className={'line'}></div>
+                            <PostsAndComments message={'Hello From '} component={'PostsAndComments'} clickID={clickID} post={post} postID={post.id} />
+                        </Aux>
+                    </WithClass>
                 )
         });
 
         return (
-            <Aux>
+            <WithClass classes={'posts'}>
                 {userPosts}
-            </Aux>
+            </WithClass>
         )}
 }
 
