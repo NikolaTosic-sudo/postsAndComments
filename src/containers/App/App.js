@@ -110,10 +110,12 @@ class App extends Component{
                           // Redirecting if there is a postID. Rendering all posts or if there is no post letting user of the site know
                           postID
                             ? <Redirect to={`/post/${postID}`}/>
-                            : <WithClass classes={'posts'}>
-                                <SearchBox message={'Hello From '} component={'SearchBox'} change={this.onSearchChange}/>
-                                {posts.length === 0 ? <h1 style={{textAlign: 'center'}}>No Posts by that User, check did you write it correctly</h1> : posts}
-                             </WithClass>
+                            : <Aux>
+                                  <SearchBox message={'Hello From '} component={'SearchBox'} change={this.onSearchChange}/>
+                                  <WithClass classes={'posts'}>
+                                    {posts.length === 0 ? <h1 style={{textAlign: 'center'}}>No Posts by that User, check did you write it correctly</h1> : posts}
+                                 </WithClass>
+                              </Aux>
                       }
                   </Route>
                   <Route path={'/post/'}>
@@ -122,8 +124,10 @@ class App extends Component{
                           postID
                               ? <Route path={`/post/${postID}`}>
                                       <Aux>
-                                          <PostsAndComments message={'Hello From '} component={'PostsAndComments'} postID={postID} clickID={this.doesNothing}/>
-                                          <Link to='/posts' onClick={this.clearState}>Go Back</Link>
+                                          <WithClass classes={'singlePost'}>
+                                              <PostsAndComments message={'Hello From '} component={'PostsAndComments'} postID={postID} clickID={this.doesNothing}/>
+                                              <button className={'button'}><Link to='/posts' onClick={this.clearState}><span>Go Back</span></Link></button>
+                                          </WithClass>
                                       </Aux>
                                 </Route>
                               : <Redirect to='/posts/' />
