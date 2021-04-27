@@ -42,4 +42,4 @@ Launches the test runner in the interactive watch mode.\
 * Before finishing, checked the code muliple times and removed all unnecessary lines from it.
 
 
-## Approximate time needed to finish the assignment: 20 hours
+### Approximate time needed to finish the assignment: 20 hours
