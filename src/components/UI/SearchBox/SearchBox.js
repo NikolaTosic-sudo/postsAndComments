@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { loggin } from "../../../assets/functions";
+import { logging } from "../../../assets/functions";
 import './SearchBox.css'
 
 const SearchBox = ({message, component, change}) => {
-    loggin(message, component);
+    logging(message, component);
     return (
 
         <div className="search-bar">

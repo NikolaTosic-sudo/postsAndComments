@@ -4,7 +4,7 @@ import axios from "axios";
 
 import './UserAndPosts.css'
 
-import {loggin} from "../../assets/functions";
+import {logging} from "../../assets/functions";
 import Aux from '../../hoc/Auxiliary'
 import WithClass from "../../hoc/WithClass";
 
@@ -50,7 +50,7 @@ class UserAndPosts extends Component {
     componentDidMount(){
         this.loadUsers();
         this.loadPosts();
-        loggin(this.props.message, this.props.component);
+        logging(this.props.message, this.props.component);
     };
 
     render() {

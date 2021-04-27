@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { loggin } from "../assets/functions";
+import { logging } from "../assets/functions";
 
 const SinglePost = ({body, message, component, click}) => {
 
-    loggin(message, component);
+    logging(message, component);
     return (
         <p onClick={click} className='post'>{body}</p>
     )

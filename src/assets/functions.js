@@ -1,4 +1,4 @@
-export const loggin = (message, component) => {
+export const logging = (message, component) => {
     console.log(message, component)
 };
 

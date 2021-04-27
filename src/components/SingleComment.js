@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { loggin } from "../assets/functions";
+import { logging } from "../assets/functions";
 
 const SingleComment = ({body, message, component}) => {
 
-    loggin(message, component);
+    logging(message, component);
     return (
         <p className='comment'>{body}</p>
     )

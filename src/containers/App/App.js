@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-ro
 
 import './App.css';
 
-import { loggin } from "../../assets/functions";
+import { logging } from "../../assets/functions";
 import Aux from '../../hoc/Auxiliary'
 import WithClass from "../../hoc/WithClass";
 import SearchBox from "../../components/UI/SearchBox/SearchBox";
@@ -45,7 +45,7 @@ class App extends Component{
 
     componentDidMount(){
         this.loadUsers();
-        loggin(this.props.message, this.props.component)
+        logging(this.props.message, this.props.component)
     };
 
     // Reloading page when the postID is cleared

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from "prop-types";
 import './Modal.css';
 import Aux from '../../../hoc/Auxiliary'
-import { loggin } from "../../../assets/functions";
+import { logging } from "../../../assets/functions";
 
 class Modal extends Component {
 
@@ -14,7 +14,7 @@ class Modal extends Component {
 
         const {message, component, show, children} = this.props;
 
-        loggin(message, component);
+        logging(message, component);
         return(
             <Aux>
                 <div

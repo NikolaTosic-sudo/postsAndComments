@@ -5,7 +5,7 @@ import axios from "axios";
 import './PostsAndComments.css';
 
 import Aux from "../../hoc/Auxiliary";
-import {loggin} from "../../assets/functions";
+import {logging} from "../../assets/functions";
 
 import SinglePost from "../../components/SinglePost";
 import SingleComment from "../../components/SingleComment";
@@ -53,7 +53,7 @@ class PostsAndComments extends Component {
     componentDidMount() {
         this.loadComments();
         this.loadSinglePost();
-        loggin(this.props.message, this.props.component);
+        logging(this.props.message, this.props.component);
     }
 
     // callBackMethod to send id of selected post via props to parent

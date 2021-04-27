@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="725ae52b-6173-40b1-bc9a-0ec6105c7b62" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Tolesla.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/App/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/App/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SingleComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SingleComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SinglePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SinglePost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Loader/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Loader/Loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Modal/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Modal/Modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/SearchBox/SearchBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/SearchBox/SearchBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/PostsAndComments/PostsAndComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/PostsAndComments/PostsAndComments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/UserAndPosts/UserAndPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/UserAndPosts/UserAndPosts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +153,7 @@
       <workItem from="1619428586154" duration="8434000" />
       <workItem from="1619446419636" duration="624000" />
       <workItem from="1619459124859" duration="21000" />
+      <workItem from="1619516894073" duration="3049000" />
     </task>
     <servers />
   </component>
