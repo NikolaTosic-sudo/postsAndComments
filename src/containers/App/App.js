@@ -49,7 +49,7 @@ class App extends Component{
     };
 
     // Reloading page when the postID is cleared
-    componentDidUpdate(prevProps, prevState){
+    componentDidUpdate(){
         if(this.state.postID === ''){
             window.location.reload()
         }
@@ -107,7 +107,7 @@ class App extends Component{
                   <Route exact path='/'><Redirect to='/posts/' /></Route>
                   <Route path='/posts/'>
                       {
-                          // Redirecting if there is a postID. Rendering all posts or if there is no post letting user of the site know
+                          // Redirecting if there is a postID. Rendering all posts or if there are no posts letting user of the site know
                           postID
                             ? <Redirect to={`/post/${postID}`}/>
                             : <Aux>

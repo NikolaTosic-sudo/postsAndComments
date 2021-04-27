@@ -78,10 +78,10 @@ class PostsAndComments extends Component {
 
         return (
             <WithClass classes={'postsAndComments'}>
-                <p style={{fontWeight: 'bold', fontStyle: 'italic'}}>Post:</p>
+                <p className={'postAndComment'}>Post:</p>
                     <SinglePost click={() => this.callBackMethod(postID)} message={'Hello From '} component={'SinglePost'}
                             body={post.body}/>
-                <p style={{fontWeight: 'bold', fontStyle: 'italic'}}>Comments:</p>
+                <p className={'postAndComment'}>Comments:</p>
                     {/* eslint-disable-next-line array-callback-return */}
                     {comments.map((comment, i) => {
                         if (postID === comment.postId) {

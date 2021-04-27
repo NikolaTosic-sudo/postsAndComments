@@ -75,7 +75,7 @@ class UserAndPosts extends Component {
                     <WithClass classes={'userAndPosts'} key={i}>
                         <Aux>
                             <h2>Post From {user}</h2>
-                            <div className={'line'}></div>
+                            <div className={'line'}> </div>
                             <PostsAndComments message={'Hello From '} component={'PostsAndComments'} clickID={clickID} post={post} postID={post.id} />
                         </Aux>
                     </WithClass>
