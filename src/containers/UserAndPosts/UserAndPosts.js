@@ -13,24 +13,8 @@ import Modal from "../../components/UI/Modal/Modal";
 
 class UserAndPosts extends Component {
     state = {
-        user: '',
         posts: [],
         error: "",
-    };
-
-    // Loading user based on the userID got from props
-    loadUsers = () => {
-        axios.get(`https://jsonplaceholder.typicode.com/users/${this.props.userID}`)
-            .then(response => {
-                this.setState({
-                    user: response.data.name,
-                })
-            })
-            .catch(error => {
-                this.setState({
-                    error: error
-                })
-            })
     };
 
     // Loading all posts from the site based on the user
@@ -48,15 +32,14 @@ class UserAndPosts extends Component {
             })
     };
     componentDidMount(){
-        this.loadUsers();
         this.loadPosts();
         logging(this.props.message, this.props.component);
     };
 
     render() {
 
-        const { posts, user, error } = this.state;
-        const { clickID } = this.props;
+        const { posts, error } = this.state;
+        const { clickID, userName } = this.props;
 
         if(error) {
             return (
@@ -74,7 +57,7 @@ class UserAndPosts extends Component {
                 return (
                     <WithClass classes={'userAndPosts'} key={i}>
                         <Aux>
-                            <h2>Post From {user}</h2>
+                            <h2>Post From {userName}</h2>
                             <div className={'line'}> </div>
                             <PostsAndComments message={'Hello From '} component={'PostsAndComments'} clickID={clickID} post={post} postID={post.id} />
                         </Aux>
