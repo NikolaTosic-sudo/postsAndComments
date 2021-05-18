@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="725ae52b-6173-40b1-bc9a-0ec6105c7b62" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Loader/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Loader/Loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/SearchBox/SearchBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/SearchBox/SearchBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SingleComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SingleComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SinglePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SinglePost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/PostsAndComments/PostsAndComments.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/PostsAndComments/PostsAndComments.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/PostsAndComments/PostsAndComments.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/PostsAndComments/PostsAndComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/PostsAndComments/PostsAndComments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/UserAndPosts/UserAndPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/UserAndPosts/UserAndPosts.js" afterDir="false" />
     </list>
@@ -152,6 +152,8 @@
       <workItem from="1619446419636" duration="624000" />
       <workItem from="1619459124859" duration="21000" />
       <workItem from="1619516894073" duration="4001000" />
+      <workItem from="1621255112482" duration="412000" />
+      <workItem from="1621329236018" duration="3863000" />
     </task>
     <servers />
   </component>
@@ -159,10 +161,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1618914039192">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1621331742336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618914039192" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621331742336" />
     <state width="1899" height="245" key="GridCell.Tab.0.bottom" timestamp="1619440304251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
