@@ -48,13 +48,6 @@ class App extends Component{
         logging(this.props.message, this.props.component)
     };
 
-    // Reloading page when the postID is cleared
-    componentDidUpdate(){
-        if(this.state.postID === ''){
-            window.location.reload()
-        }
-    }
-
     onSearchChange = (event) => {
         this.setState({search: event.currentTarget.value})
     };
@@ -97,7 +90,7 @@ class App extends Component{
         // Mapping users based on search input
         const posts = users.map((user, i) =>
             user.name.toLowerCase().includes(search.toLowerCase())
-                ? <UserAndPosts message={'Hello From '} component={'UserAndPosts'} clickID={this.getId} key={i} userID={user.id} />
+                ? <UserAndPosts message={'Hello From '} component={'UserAndPosts'} clickID={this.getId} key={i} userID={user.id} userName={user.name} />
                 : null)
             .filter(post => post !== null);
 
