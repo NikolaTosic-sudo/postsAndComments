@@ -2,15 +2,12 @@ import React, { Component } from 'react'
 import PropTypes from "prop-types";
 import axios from "axios";
 
-import './PostsAndComments.css';
-
 import Aux from "../../hoc/Auxiliary";
 import {logging} from "../../assets/functions";
 
 import SinglePost from "../../components/SinglePost";
 import SingleComment from "../../components/SingleComment";
 import Modal from "../../components/UI/Modal/Modal";
-import WithClass from "../../hoc/WithClass";
 
 class PostsAndComments extends Component {
 
@@ -77,19 +74,25 @@ class PostsAndComments extends Component {
         }
 
         return (
-            <WithClass classes={'postsAndComments'}>
+            <Aux>
+                {/*Rendering Single Post*/}
                 <p className={'postAndComment'}>Post:</p>
                     <SinglePost click={() => this.callBackMethod(postID)} message={'Hello From '} component={'SinglePost'}
                             body={post.body}/>
+
+
+                {/*Rendering Comments of Single post*/}
                 <p className={'postAndComment'}>Comments:</p>
-                    {/* eslint-disable-next-line array-callback-return */}
+
                     {comments.map((comment, i) => {
                         if (postID === comment.postId) {
                             return <SingleComment message={'Hello From '} component={'Single Comment'} key={i}
                                                   body={comment.body}/>
+                        } else {
+                            return null
                         }
                     })}
-            </WithClass>
+            </Aux>
         )
     }
 }
