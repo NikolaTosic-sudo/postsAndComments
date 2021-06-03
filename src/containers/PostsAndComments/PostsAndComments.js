@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import axios from "axios";
 
 import Aux from "../../hoc/Auxiliary";
-import {logging} from "../../assets/functions";
 
 import SinglePost from "../../components/SinglePost";
 import SingleComment from "../../components/SingleComment";
@@ -50,7 +49,6 @@ class PostsAndComments extends Component {
     componentDidMount() {
         this.loadComments();
         this.loadSinglePost();
-        logging(this.props.message, this.props.component);
     }
 
     // callBackMethod to send id of selected post via props to parent
@@ -65,7 +63,7 @@ class PostsAndComments extends Component {
         if (error) {
             return (
                 <Aux>
-                    <Modal message={'Hello From '} component={'Modal'} show={error}>
+                    <Modal show={error}>
                         <p>There was an error loading posts.</p>
                         <button onClick={this.componentDidMount}>Try again</button>
                     </Modal>
@@ -77,7 +75,7 @@ class PostsAndComments extends Component {
             <Aux>
                 {/*Rendering Single Post*/}
                 <p className={'postAndComment'}>Post:</p>
-                    <SinglePost click={() => this.callBackMethod(postID)} message={'Hello From '} component={'SinglePost'}
+                    <SinglePost click={() => this.callBackMethod(postID)}
                             body={post.body}/>
 
 
@@ -86,7 +84,7 @@ class PostsAndComments extends Component {
 
                     {comments.map((comment, i) => {
                         if (postID === comment.postId) {
-                            return <SingleComment message={'Hello From '} component={'Single Comment'} key={i}
+                            return <SingleComment key={i}
                                                   body={comment.body}/>
                         } else {
                             return null
@@ -100,8 +98,6 @@ class PostsAndComments extends Component {
 PostsAndComments.propTypes = {
     postID: PropTypes.number.isRequired,
     clickID: PropTypes.func,
-    message: PropTypes.string,
-    component: PropTypes.string
 };
 
 export default PostsAndComments

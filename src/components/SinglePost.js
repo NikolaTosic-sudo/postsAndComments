@@ -11,8 +11,6 @@ const SinglePost = ({body, click}) => {
 SinglePost.propTypes = {
     body: PropTypes.string,
     click: PropTypes.func.isRequired,
-    message: PropTypes.string,
-    component: PropTypes.string
 };
 
 export default SinglePost

@@ -10,8 +10,6 @@ const SingleComment = ({body}) => {
 
 SingleComment.propTypes = {
     body: PropTypes.string,
-    message: PropTypes.string,
-    component: PropTypes.string
 };
 
 export default SingleComment

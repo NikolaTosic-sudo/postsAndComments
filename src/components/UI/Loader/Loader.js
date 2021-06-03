@@ -1,13 +1,9 @@
 import React from 'react'
-import PropTypes from "prop-types";
 import './Loader.css'
-import { logging } from "../../../assets/functions";
 import WithClass from "../../../hoc/WithClass";
 
 
-const Loader = ({message, component}) => {
-
-        logging(message, component);
+const Loader = () => {
         return(
             <WithClass classes="loader-container">
                 <div className="loader">
@@ -18,10 +14,5 @@ const Loader = ({message, component}) => {
             </WithClass>
         );
     };
-
-Loader.propTypes = {
-    message: PropTypes.string,
-    component: PropTypes.string
-};
 
 export default Loader

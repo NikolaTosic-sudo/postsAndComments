@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from "prop-types";
 import './Modal.css';
 import Aux from '../../../hoc/Auxiliary'
-import { logging } from "../../../assets/functions";
 
 class Modal extends Component {
 
@@ -12,9 +11,8 @@ class Modal extends Component {
 
     render() {
 
-        const {message, component, show, children} = this.props;
+        const {show, children} = this.props;
 
-        logging(message, component);
         return(
             <Aux>
                 <div
@@ -33,8 +31,6 @@ Modal.propTypes = {
     show: PropTypes.object,
     modalClosed: PropTypes.func,
     children: PropTypes.any,
-    message: PropTypes.string,
-    component: PropTypes.string
 };
 
 

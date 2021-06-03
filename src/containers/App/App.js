@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from "prop-types";
 import axios from "axios";
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom'
 
 import './App.css';
-
-import { logging } from "../../assets/functions";
 import Aux from '../../hoc/Auxiliary'
 import WithClass from "../../hoc/WithClass";
 import SearchBox from "../../components/UI/SearchBox/SearchBox";
@@ -45,7 +42,6 @@ class App extends Component{
 
     componentDidMount(){
         this.loadUsers();
-        logging(this.props.message, this.props.component)
     };
 
     onSearchChange = (event) => {
@@ -75,12 +71,12 @@ class App extends Component{
         const { loading, error, postID, search, users } = this.state;
 
         if(loading) {
-            return <Loader message={'Hello From '} component={'Loader'} />
+            return <Loader />
         }
 
         if(error) {
             return (
-                <Modal message={'Hello From '} component={'Modal'} show={error}>
+                <Modal show={error}>
                     <p>There was an error loading posts.</p>
                     <button onClick={this.loadUsers}>Try again</button>
                 </Modal>
@@ -90,7 +86,7 @@ class App extends Component{
         // Mapping users based on search input
         const posts = users.map((user, i) =>
             user.name.toLowerCase().includes(search.toLowerCase())
-                ? <UserAndPosts message={'Hello From '} component={'UserAndPosts'} clickID={this.getId} key={i} userID={user.id} userName={user.name} />
+                ? <UserAndPosts clickID={this.getId} key={i} userID={user.id} userName={user.name} />
                 : null)
             .filter(post => post !== null);
 
@@ -104,7 +100,7 @@ class App extends Component{
                           postID
                             ? <Redirect to={`/post/${postID}`}/>
                             : <Aux>
-                                  <SearchBox message={'Hello From '} component={'SearchBox'} change={this.onSearchChange}/>
+                                  <SearchBox change={this.onSearchChange}/>
                                   <WithClass classes={'posts'}>
                                     {posts.length === 0 ? <h1 style={{textAlign: 'center'}}>No Posts by that User, check did you write it correctly</h1> : posts}
                                  </WithClass>
@@ -118,7 +114,7 @@ class App extends Component{
                               ? <Route path={`/post/${postID}`}>
                                       <Aux>
                                           <WithClass classes={'singlePost'}>
-                                              <PostsAndComments message={'Hello From '} component={'PostsAndComments'} postID={postID} clickID={this.doesNothing}/>
+                                              <PostsAndComments postID={postID} clickID={this.doesNothing}/>
                                               <button className={'button'}><Link to='/posts' onClick={this.clearState}><span>Go Back</span></Link></button>
                                           </WithClass>
                                       </Aux>
@@ -130,10 +126,5 @@ class App extends Component{
           </Router>
       );
 }}
-
-App.propTypes = {
-    message: PropTypes.string,
-    component: PropTypes.string
-};
 
 export default App;

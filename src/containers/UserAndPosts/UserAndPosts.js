@@ -4,7 +4,6 @@ import axios from "axios";
 
 import './UserAndPosts.css'
 
-import {logging} from "../../assets/functions";
 import Aux from '../../hoc/Auxiliary'
 import WithClass from "../../hoc/WithClass";
 
@@ -33,7 +32,6 @@ class UserAndPosts extends Component {
     };
     componentDidMount(){
         this.loadPosts();
-        logging(this.props.message, this.props.component);
     };
 
     render() {
@@ -44,7 +42,7 @@ class UserAndPosts extends Component {
         if(error) {
             return (
                 <Aux>
-                    <Modal message={'Hello From '} component={'Modal'} show={error}>
+                    <Modal show={error}>
                         <p>There was an error loading posts.</p>
                         <button onClick={this.componentDidMount}>Try again</button>
                     </Modal>
@@ -59,7 +57,7 @@ class UserAndPosts extends Component {
                         <Aux>
                             <h2>Post From {userName}</h2>
                             <div className={'line'}> </div>
-                            <PostsAndComments message={'Hello From '} component={'PostsAndComments'} clickID={clickID} post={post} postID={post.id} />
+                            <PostsAndComments clickID={clickID} post={post} postID={post.id} />
                         </Aux>
                     </WithClass>
                 )
@@ -75,8 +73,6 @@ class UserAndPosts extends Component {
 UserAndPosts.propTypes = {
     userID: PropTypes.number.isRequired,
     clickID: PropTypes.func,
-    message: PropTypes.string,
-    component: PropTypes.string
 };
 
 export default UserAndPosts
